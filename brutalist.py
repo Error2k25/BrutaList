@@ -12,17 +12,29 @@ def generate_limited_wordlist():
     charset_list = list(raw_input)
     charset_length = len(charset_list)
 
-    min_len = int(input("Enter minimum length of combinations: ").strip())
-    max_len = charset_length  # can't build longer combos than input length
+    try:
+        min_len = int(input("Enter minimum length of combinations: ").strip())
+        max_len = int(input(f"Enter maximum length of combinations (max {charset_length}): ").strip())
+
+        if min_len <= 0 or max_len <= 0:
+            print("Lengths must be positive integers. Exiting.")
+            return
+        if min_len > max_len:
+            print("Minimum length cannot be greater than maximum length. Exiting.")
+            return
+        if max_len > charset_length:
+            print(f"Maximum length cannot exceed total characters ({charset_length}). Exiting.")
+            return
+
+    except ValueError:
+        print("Invalid input. Please enter valid integers. Exiting.")
+        return
 
     combinations = set()
 
     for length in range(min_len, max_len + 1):
-        # Use multiset-aware permutations by generating and filtering
         for p in set(itertools.permutations(charset_list, length)):
-            # Count characters in this permutation
             p_count = Counter(p)
-            # Make sure we don't use any char more than original input
             if all(p_count[c] <= char_counter[c] for c in p_count):
                 combinations.add(''.join(p))
 
