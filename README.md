@@ -46,7 +46,7 @@ Make sure Python 3 is installed. Kali usually ships with Python 3 pre-installed.
 ⚔️ Use this file with your favorite tools like: 🛠️💀
 
 `hydra -L users.txt -P BrutaList.txt ssh://target` 🐉🔐  <br> <br>
-or
+or <br> <br>
 `wfuzz -w BrutaList.txt --hc 404 http://target.com/login.php?user=FUZZ` 🌐🎯  <br> <br>
 
 ---
