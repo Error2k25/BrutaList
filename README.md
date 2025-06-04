@@ -28,10 +28,8 @@ No bloat. No guesswork. Just raw, optimized brute-force ammo. 🔥🔫⚡
 
 ## 🧰 Installation (Kali Linux)
 
-Make sure Python 3 is installed. Kali usually ships with Python 3 pre-installed.  
-To install required libraries:
+Make sure Python 3 is installed. Kali usually ships with Python 3 pre-installed.
 
-```bash
 🧰 `sudo apt update` 🔄⚙️  
 🧰 `sudo apt install python3 python3-pip -y` 🐍📦  
 🔽 `git clone https://github.com/Error2k25/BrutaList.git` 🧬💣
