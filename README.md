@@ -31,24 +31,44 @@ No bloat. No guesswork. Just raw, optimized brute-force ammo. ⚡
 
 Make sure Python 3 is installed. Kali usually ships with Python 3 pre-installed.
 
-🧰 `sudo apt update`  <br> <br>
-🧰 `sudo apt install python3 python3-pip -y`  <br> <br>
-🔽 `git clone https://github.com/Error2k25/BrutaList.git`  <br> <br>
-📂 `cd BrutaList`  <br> <br>
-⚙️ `python3 brutalist.py`  <br> <br>
+**1. 🔄 Update your system:**
+```bash
+sudo apt update
+sudo apt install python3 python3-pip -y
+```
 
 ---
 
-💾 All combinations will be saved in a file called:  <br> <br>
-📝 BrutaList.txt
+**2. 🌀 Clone this repository:**
+```bash
+git clone https://github.com/Error2k25/BrutaList.git
+cd BrutaList
+```
+
+---
+
+**3. ⚙️ Run BrutaList:**
+```bash
+python3 brutalist.py
+```
+
+---
+
+All generated combinations will be saved in:
+
+`BrutaList.txt`
 
 ---
 
 ⚔️ Use this file with your favorite tools like:
 
-`hydra -L users.txt -P BrutaList.txt ssh://target`  <br> <br>
-or  <br> <br>
-`wfuzz -w BrutaList.txt --hc 404 http://target.com/login.php?user=FUZZ`  <br> <br>
+```bash
+hydra -L users.txt -P BrutaList.txt ssh://target
+```
+or
+```bash
+wfuzz -w BrutaList.txt --hc 404 http://target.com/login.php?user=FUZZ
+```
 
 ---
 
