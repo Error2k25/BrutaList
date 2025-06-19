@@ -54,9 +54,9 @@ python3 brutalist.py
 
 ---
 
-All generated combinations will be saved in:
+💾 All generated combinations will be saved in:
 
-`BrutaList.txt`
+📝 `BrutaList.txt`
 
 ---
 
